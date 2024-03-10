@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Prediction</title>
+</head>
+<body>
+    <h1>Salary Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="job_title">Job Title:</label>
+        <select name="job_title" id="job_title">
+            {% for choice in job_title_choices %}
+                <option value="{{ choice }}">{{ choice }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="job_category">Job Category:</label>
+        <select name="job_category" id="job_category">
+            {% for choice in job_category_choices %}
+                <option value="{{ choice }}">{{ choice }}</option>
+            {% endfor %}
+        </select>
+
